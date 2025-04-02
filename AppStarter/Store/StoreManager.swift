@@ -109,7 +109,7 @@ class StoreManager: ObservableObject {
     
     func requestReview(context: String) {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
-        SKStoreReviewController.requestReview(in: windowScene)
+        AppStore.requestReview(in: windowScene)
     }
 }
 
