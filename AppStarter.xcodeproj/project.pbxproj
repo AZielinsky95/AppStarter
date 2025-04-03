@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D23F0BBA2D9E19D800CA8A6D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D23F0BB92D9E19D800CA8A6D /* Kingfisher */; };
+		D23F0BBD2D9E1A8100CA8A6D /* DebugMenu in Frameworks */ = {isa = PBXBuildFile; productRef = D23F0BBC2D9E1A8100CA8A6D /* DebugMenu */; };
 		D298A3CE2D98F834003E42A3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D298A3CD2D98F834003E42A3 /* Alamofire */; };
 		D298A3D62D98F8B5003E42A3 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = D298A3D52D98F8B5003E42A3 /* AnyCodable */; };
 		D298A41D2D9BE19C003E42A3 /* SwiftNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = D298A41C2D9BE19C003E42A3 /* SwiftNavigation */; };
@@ -58,6 +59,7 @@
 			files = (
 				D23F0BBA2D9E19D800CA8A6D /* Kingfisher in Frameworks */,
 				D298A41F2D9BE19C003E42A3 /* SwiftUINavigation in Frameworks */,
+				D23F0BBD2D9E1A8100CA8A6D /* DebugMenu in Frameworks */,
 				D298A41D2D9BE19C003E42A3 /* SwiftNavigation in Frameworks */,
 				D298A3CE2D98F834003E42A3 /* Alamofire in Frameworks */,
 				D298A3D62D98F8B5003E42A3 /* AnyCodable in Frameworks */,
@@ -135,6 +137,7 @@
 				D298A41E2D9BE19C003E42A3 /* SwiftUINavigation */,
 				D298A4202D9BE19C003E42A3 /* UIKitNavigation */,
 				D23F0BB92D9E19D800CA8A6D /* Kingfisher */,
+				D23F0BBC2D9E1A8100CA8A6D /* DebugMenu */,
 			);
 			productName = AppStarter;
 			productReference = D298A39C2D98F77C003E42A3 /* AppStarter.app */;
@@ -220,6 +223,7 @@
 				D298A3D32D98F8A2003E42A3 /* XCRemoteSwiftPackageReference "AnyCodable" */,
 				D298A41B2D9BE19C003E42A3 /* XCRemoteSwiftPackageReference "swift-navigation" */,
 				D23F0BB82D9E19D800CA8A6D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D23F0BBB2D9E1A8100CA8A6D /* XCRemoteSwiftPackageReference "debug-menu-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D298A39D2D98F77C003E42A3 /* Products */;
@@ -594,6 +598,14 @@
 				minimumVersion = 8.3.1;
 			};
 		};
+		D23F0BBB2D9E1A8100CA8A6D /* XCRemoteSwiftPackageReference "debug-menu-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/steamclock/debug-menu-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		D298A3CC2D98F834003E42A3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -625,6 +637,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D23F0BB82D9E19D800CA8A6D /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		D23F0BBC2D9E1A8100CA8A6D /* DebugMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D23F0BBB2D9E1A8100CA8A6D /* XCRemoteSwiftPackageReference "debug-menu-ios" */;
+			productName = DebugMenu;
 		};
 		D298A3CD2D98F834003E42A3 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

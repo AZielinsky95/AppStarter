@@ -29,6 +29,14 @@ struct AppView: View {
             .tabItem {
                 Label("Second", systemImage: "list.clipboard.fill")
             }
+            
+            NavigationStack {
+                SettingsView(model: .init())
+            }
+            .tag(AppModel.Tab.third)
+            .tabItem {
+                Label("Settings", systemImage: "gear.circle.fill")
+            }
         }
     }
 }
