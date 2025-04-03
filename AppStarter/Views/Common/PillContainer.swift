@@ -12,19 +12,29 @@ struct PillContainer: View {
     var text: String
     var image: Image? = nil
     var imagePlacement: ImagePlacement = .leading
-    var backgroundColor: Color = Color.blue.opacity(0.1)
-    var foregroundColor: Color = .blue
-    var padding: EdgeInsets = EdgeInsets(top: 6, leading: 12, bottom: 6, trailing: 12)
+    var backgroundColor: Color = Styles.Pill.backgroundColor
+    var foregroundColor: Color = Styles.Pill.foregroundColor
+    var imageColor: Color = Styles.Pill.imageColor
+    var imageSize: CGSize = Styles.Pill.imageSize
+    var padding: EdgeInsets = Styles.Pill.padding
 
     enum ImagePlacement {
         case leading
         case trailing
     }
+    
+    func imageView(for image: Image) -> some View {
+        image
+            .resizable()
+            .scaledToFit()
+            .frame(width: imageSize.width, height: imageSize.height)
+            .foregroundColor(imageColor)
+    }
 
     var body: some View {
-        HStack(spacing: 6) {
+        HStack(spacing: .spacing4xxxSmall) {
             if imagePlacement == .leading, let image = image {
-                image
+                imageView(for: image)
             }
 
             Text(text)
@@ -32,11 +42,16 @@ struct PillContainer: View {
                 .font(.caption)
 
             if imagePlacement == .trailing, let image = image {
-                image
+                imageView(for: image)
             }
         }
         .padding(padding)
         .background(backgroundColor)
         .clipShape(Capsule())
     }
+}
+
+#Preview {
+    PillContainer(text: "Test")
+    PillContainer(text: "Test", image: Image(systemName: "pencil"))
 }
